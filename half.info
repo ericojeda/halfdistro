@@ -1,0 +1,12 @@
+name = Half
+description = Custon install pre-configured for Half.
+version = VERSION
+core = 7.x
+dependencies[] = block
+dependencies[] = dblog
+
+; Information added by HCK2 
+version = "7.34"
+project = "half"
+datestamp = "1416429488"
+
