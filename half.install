@@ -11,7 +11,7 @@
  *
  * @see system_install()
  */
-function minimal_install() {
+function half_install() {
 
   // Enable the admin theme.
   db_update('system')
