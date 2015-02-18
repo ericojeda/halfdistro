@@ -22,7 +22,26 @@ dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
 
+; Contributed Modules
 dependencies[] = backup_migrate
+dependencies[] = ctools
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = imce
+dependencies[] = imce_wysiwyg
+dependencies[] = jquery_update
+dependencies[] = libraries
+dependencies[] = link
+dependencies[] = menu_block
+dependencies[] = menu_position
+dependencies[] = nodequeue
+dependencies[] = pathauto
+dependencies[] = references
+dependencies[] = node_reference
+dependencies[] = token
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = wysiwyg
 
 ; Information added by HCK2 
 version = "7.34"
