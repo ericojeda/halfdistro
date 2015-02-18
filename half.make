@@ -1,4 +1,4 @@
-api = 2
+api = 3
 core = 7.x
 
 projects[backup_migrate][type] = module
@@ -11,6 +11,5 @@ projects[backup_migrate][download][branch] = 7.x-2.x
 
 ; Themes =========================================================
 projects[half][type] = theme
-projects[half][version] = 1.0
 projects[half][download][type] = git
-projects[half][download][url] = "https://github.com/ericojeda/halftheme.git"
+projects[half][download][url] = "git://github.com/ericojeda/halftheme.git"
