@@ -4,6 +4,7 @@ version = VERSION
 core = 7.x
 dependencies[] = block
 dependencies[] = dblog
+dependencies[] = admin_menu
 
 ; Information added by HCK2 
 version = "7.34"
