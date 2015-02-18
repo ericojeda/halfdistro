@@ -13,25 +13,27 @@
  */
 function minimal_install() {
 
-  // Any themes without keys here will get numeric keys and so will be enabled,
-  // but not placed into variables.
-  $enable = array(
-    'theme_default' => 'half',
-    'admin_theme' => 'seven',
-  );
-  theme_enable($enable);
-
-  foreach ($enable as $var => $theme) {
-    if (!is_numeric($var)) {
-      variable_set($var, $theme);
-    }
-  }
-
-  // Set node edit to admin theme
+  // Enable the admin theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'seven')
+    ->execute();
+  // Enable the default Half theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'half')
+    ->execute();
+  // Disable the Bartik theme
+  db_update('system')
+    ->fields(array('status' => 0))
+    ->condition('type', 'theme')
+    ->condition('name', 'bartik')
+    ->execute();
+  variable_set('admin_theme', 'seven');
+  variable_set('theme_default', 'half');
   variable_set('node_admin_theme', '1');
-
-  // Disable the default Bartik theme
-  theme_disable(array('bartik'));
 
   // Enable some standard blocks.
   $default_theme = variable_get('theme_default', 'half');
