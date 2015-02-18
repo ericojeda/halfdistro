@@ -1,6 +1,9 @@
 api = 2
 core = 7.34
 
+projects[drupal][type] = core
+projects[drupal][version] = 7.34
+
 ; Add the Half profile to the full distribution build.
 projects[half][type] = "profile"
 projects[half][download][type] = "git"
