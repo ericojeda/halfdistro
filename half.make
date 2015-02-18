@@ -46,4 +46,4 @@ projects[halftheme][download][branch] = master
 ; Libraries ======================================================
 libraries[ckeditor][type] = library
 libraries[ckeditor][download][type] = get
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3.2/ckeditor_4.3.2_standard.zip"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor%20for%20Drupal/CKEditor%204.4.5%20for%20Drupal/ckeditor_4.4.5_for_drupal_7.zip"
