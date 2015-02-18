@@ -137,75 +137,75 @@ function half_install() {
   }
 
   // Adding wysiwyg to text formats
-  // $ckeditor_settings = array(
-  //   'default' => 1,
-  //   'user_choose' => 0,
-  //   'show_toggle' => 0,
-  //   'theme' => 'advanced',
-  //   'language' => 'en',
-  //   'buttons' => array(
-  //     'default' => array(
-  //       'bold' => 1,
-  //       'italic' => 1,
-  //       'justifyleft' => 1,
-  //       'justifycenter' => 1,
-  //       'justifyright' => 1,
-  //       'bulllist' => 1,
-  //       'numlist' => 1,
-  //       'link' => 1,
-  //       'unlink' => 1,
-  //       'image' => 1,
-  //       'formatselect' => 1,
-  //       'sup' => 1,
-  //       'sub' => 1,
-  //       'code' => 1,
-  //     ),
-  //   ),
-  //   'toolbar_loc' => 'top',
-  //   'toolbar_align' => 'left',
-  //   'path_loc' => 'bottom',
-  //   'resizing' => 1,
-  //   'verify_html' => 1,
-  //   'preformatted' => 0,
-  //   'convert_fonts_to_spans' => 1,
-  //   'remove_linebreaks' => 1,
-  //   'apply_source_formatting' => 0,
-  //   'paste_auto_cleanup_on_paste' => 1,
-  //   'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
-  //   'css_setting' => 'theme',
-  //   'css_path' => '',
-  //   'css_classes' => '',
-  // );
+  $ckeditor_settings = array(
+    'default' => 1,
+    'user_choose' => 0,
+    'show_toggle' => 0,
+    'theme' => 'advanced',
+    'language' => 'en',
+    'buttons' => array(
+      'default' => array(
+        'bold' => 1,
+        'italic' => 1,
+        'justifyleft' => 1,
+        'justifycenter' => 1,
+        'justifyright' => 1,
+        'bulllist' => 1,
+        'numlist' => 1,
+        'link' => 1,
+        'unlink' => 1,
+        'image' => 1,
+        'formatselect' => 1,
+        'sup' => 1,
+        'sub' => 1,
+        'code' => 1,
+      ),
+    ),
+    'toolbar_loc' => 'top',
+    'toolbar_align' => 'left',
+    'path_loc' => 'bottom',
+    'resizing' => 1,
+    'verify_html' => 1,
+    'preformatted' => 0,
+    'convert_fonts_to_spans' => 1,
+    'remove_linebreaks' => 1,
+    'apply_source_formatting' => 0,
+    'paste_auto_cleanup_on_paste' => 1,
+    'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
+    'css_setting' => 'theme',
+    'css_path' => '',
+    'css_classes' => '',
+  );
 
   // Create the record.
-  // $record = array(
-  //   'format' => 'full_html',
-  //   'editor' => 'ckeditor',
-  //   'settings' => $ckeditor_settings,
-  // );
+  $record = array(
+    'format' => 'full_html',
+    'editor' => 'ckeditor',
+    'settings' => $ckeditor_settings,
+  );
 
   // Save the record to the database.
-  //drupal_write_record('wysiwyg', $record);
+  drupal_write_record('wysiwyg', $record);
 
   // Allow visitor account creation, but with administrative approval.
-  variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
+  // variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
 
   // Enable default permissions for system roles.
-  $filtered_html_permission = filter_permission_name($full_html_format);
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'access comments', $filtered_html_permission));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access comments', 'post comments', 'skip comment approval', $filtered_html_permission));
+  // $full_html_permission = filter_permission_name($full_html_format);
+  // user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
+  // user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access comments', 'post comments', 'skip comment approval', $full_html_permission));
 
   // Create a default role for site administrators, with all available permissions assigned.
-  $admin_role = new stdClass();
-  $admin_role->name = 'administrator';
-  $admin_role->weight = 2;
-  user_role_save($admin_role);
-  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  // $admin_role = new stdClass();
+  // $admin_role->name = 'administrator';
+  // $admin_role->weight = 2;
+  // user_role_save($admin_role);
+  // user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
   // Set this as the administrator role.
-  variable_set('user_admin_role', $admin_role->rid);
+  // variable_set('user_admin_role', $admin_role->rid);
 
   // Assign user 1 the "administrator" role.
-  db_insert('users_roles')
-    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
-    ->execute();
+  // db_insert('users_roles')
+  //   ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+  //   ->execute();
 }
