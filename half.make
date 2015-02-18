@@ -14,7 +14,7 @@ projects[imce][version] = 1.9
 projects[imce][subdir] = contrib
 projects[imce_wysiwyg][version] = 1.0
 projects[imce_wysiwyg][subdir] = contrib
-projects[jquery_update][version] = 2.4
+projects[jquery_update][version] = 2.5
 projects[jquery_update][subdir] = contrib
 projects[libraries][version] = 2.2
 projects[libraries][subdir] = contrib
@@ -42,3 +42,8 @@ projects[halftheme][type] = theme
 projects[halftheme][download][type] = git
 projects[halftheme][download][url] = "git://github.com/ericojeda/halftheme.git"
 projects[halftheme][download][branch] = master
+
+; Libraries ======================================================
+libraries[ckeditor][type] = library
+libraries[ckeditor][download][type] = git
+libraries[ckeditor][download][url] = "https://github.com/ckeditor/ckeditor5-core.git"
