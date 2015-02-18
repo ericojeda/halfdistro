@@ -1,11 +1,29 @@
 name = Half
-description = Custon install pre-configured for Half.
+description = Custom install profile for HCK2.
 version = VERSION
 core = 7.x
 dependencies[] = block
+dependencies[] = color
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
 dependencies[] = dblog
-dependencies[] = admin_menu
-dependencies[] = views
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = toolbar
+dependencies[] = field
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
+
+dependencies[] = backup_migrate
 
 ; Information added by HCK2 
 version = "7.34"

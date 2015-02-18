@@ -1,9 +1,16 @@
 api = 2
 core = 7.x
 
-projects[admin_menu][type] = module
-projects[admin_menu][subdir] = contrib
-projects[admin_menu][version] = 3.0-rc3
-projects[admin_menu][download][type] = git
-projects[admin_menu][download][url] = "http://git.drupal.org/project/admin_menu.git"
-projects[admin_menu][download][branch] = 7.x-3.x
+projects[backup_migrate][type] = module
+projects[backup_migrate][subdir] = contrib
+projects[backup_migrate][version] = 2.8-rc3
+projects[backup_migrate][download][type] = git
+projects[backup_migrate][download][url] = "http://git.drupal.org/project/backup_migrate.git"
+projects[backup_migrate][download][branch] = 7.x-2.x
+
+
+; Themes =========================================================
+projects[half][type] = theme
+projects[half][version] = 1.0
+projects[half][download][type] = git
+projects[half][download][url] = "https://github.com/ericojeda/halftheme.git"
