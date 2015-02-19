@@ -45,5 +45,5 @@ projects[halftheme][download][branch] = master
 
 ; Libraries ======================================================
 libraries[ckeditor][type] = library
-libraries[ckeditor][download][type] = git
-libraries[ckeditor][download][url] = "https://github.com/ericojeda/ckeditor.git"
+libraries[ckeditor][download][type] = get
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3.2/ckeditor_4.3.2_full.zip"
