@@ -48,9 +48,9 @@ dependencies[] = views_data_export
 
 ; Features
 dependencies[] = bios
-;dependencies[] = events
-;dependencies[] = locations
-;dependencies[] = white_papers
+dependencies[] = events
+dependencies[] = locations
+dependencies[] = white_papers
 
 ; Information added by HCK2 
 version = "7.34"
