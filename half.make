@@ -1,7 +1,7 @@
 api = 2
 core = 7.34
 
-; Modules ========================================================
+; Contributed Modules ============================================
 projects[backup_migrate][version] = 2.8
 projects[backup_migrate][subdir] = contrib
 projects[ckeditor][version] = 1.16
@@ -35,6 +35,12 @@ projects[token][subdir] = contrib
 projects[views][version] = 3.10
 projects[views][subdir] = contrib
 
+; Custom Modules =================================================
+projects[hck2][type] = module
+projects[hck2][download][type] = git
+projects[hck2][download][url] = "https://knots-of-burl.git.beanstalkapp.com/burls.git"
+projects[hck2][subdir] = features
+
 ; Themes =========================================================
 projects[halftheme][type] = theme
 projects[halftheme][download][type] = git
@@ -42,9 +48,3 @@ projects[halftheme][download][url] = "git://github.com/ericojeda/halftheme.git"
 projects[halftheme][download][branch] = master
 
 ; Libraries ======================================================
-
-; Features =======================================================
-features[features][type] = feature
-features[features][download][type] = git
-features[features][download][url] = "https://knots-of-burl.git.beanstalkapp.com/burls.git"
-features[features][download][branch] = master
