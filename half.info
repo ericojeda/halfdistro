@@ -34,7 +34,7 @@ dependencies[] = jquery_update
 dependencies[] = libraries
 dependencies[] = link
 dependencies[] = menu_block
-;dependencies[] = menu_position
+dependencies[] = menu_position
 dependencies[] = nodequeue
 dependencies[] = pathauto
 dependencies[] = references
@@ -48,9 +48,9 @@ dependencies[] = views_data_export
 
 ; Features
 dependencies[] = bios
-dependencies[] = events
+;dependencies[] = events
 ;dependencies[] = locations
-;dependencies[] = white_papers
+dependencies[] = white_papers
 
 ; Information added by HCK2 
 version = "7.34"
