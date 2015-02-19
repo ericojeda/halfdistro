@@ -12,10 +12,8 @@ projects[date][version] = 2.8
 projects[date][subdir] = contrib
 projects[entity][version] = 1.5
 projects[entity][subdir] = contrib
-;projects[imce][version] = 1.9
-;projects[imce][subdir] = contrib
-;projects[imce_wysiwyg][version] = 1.0
-;projects[imce_wysiwyg][subdir] = contrib
+projects[features][version] = 1.5
+projects[features][subdir] = contrib
 projects[jquery_update][version] = 2.5
 projects[jquery_update][subdir] = contrib
 projects[libraries][version] = 2.2
@@ -36,8 +34,6 @@ projects[token][version] = 1.5
 projects[token][subdir] = contrib
 projects[views][version] = 3.10
 projects[views][subdir] = contrib
-;projects[wysiwyg][version] = 2.2
-;projects[wysiwyg][subdir] = contrib
 
 ; Themes =========================================================
 projects[halftheme][type] = theme
@@ -46,6 +42,9 @@ projects[halftheme][download][url] = "git://github.com/ericojeda/halftheme.git"
 projects[halftheme][download][branch] = master
 
 ; Libraries ======================================================
-;libraries[ckeditor][type] = library
-;libraries[ckeditor][download][type] = get
-;libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3.2/ckeditor_4.3.2_full.zip"
+
+; Features =======================================================
+features[features][type] = feature
+features[features][download][type] = git
+features[features][download][url] = "https://knots-of-burl.git.beanstalkapp.com/burls.git"
+features[features][download][branch] = master
