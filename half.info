@@ -23,7 +23,7 @@ dependencies[] = file
 dependencies[] = rdf
 
 ; Contributed Modules
-;dependencies[] = actions_permissions
+dependencies[] = actions_permissions
 dependencies[] = backup_migrate
 dependencies[] = ctools
 dependencies[] = ckeditor
@@ -38,13 +38,13 @@ dependencies[] = menu_block
 dependencies[] = nodequeue
 dependencies[] = pathauto
 dependencies[] = references
-;dependencies[] = strongarm
+dependencies[] = strongarm
 dependencies[] = node_reference
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
-;dependencies[] = views_bulk_operations
-;dependencies[] = views_data_export
+dependencies[] = views_bulk_operations
+dependencies[] = views_data_export
 
 ; Features
 dependencies[] = bios
