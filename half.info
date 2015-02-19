@@ -37,10 +37,13 @@ dependencies[] = menu_position
 dependencies[] = nodequeue
 dependencies[] = pathauto
 dependencies[] = references
+dependencies[] = strongarm
 dependencies[] = node_reference
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
+dependencies[] = views_bulk_operations
+dependencies[] = views_data_export
 
 ; Features
 dependencies[] = bios
