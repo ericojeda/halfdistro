@@ -108,7 +108,7 @@ function half_install() {
   variable_set('node_submitted_page', FALSE);
 
   // Setting text formats
-  $text_formats['full_html'] = array(
+  $full_html_format = array(
     'format' => 'full_html',
     'name' => 'Full HTML',
     'weight' => 1,
@@ -118,7 +118,7 @@ function half_install() {
         'weight' => 0,
         'status' => 1,
       ),
-        // Line break filter.
+      // Line break filter.
       'filter_autop' => array(
         'weight' => 1,
         'status' => 1,
@@ -130,11 +130,8 @@ function half_install() {
       ),
     ),
   );
-
-  foreach ($text_formats as $text_format) {
-    $text_format = (object) $text_format;
-    filter_format_save($text_format);
-  }
+  $full_html_format = (object) $full_html_format;
+  filter_format_save($full_html_format);
 
   // Adding wysiwyg to text formats
   $ckeditor_settings = array(
@@ -196,13 +193,13 @@ function half_install() {
   // user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access comments', 'post comments', 'skip comment approval', $full_html_permission));
 
   // Create a default role for site administrators, with all available permissions assigned.
-  // $admin_role = new stdClass();
-  // $admin_role->name = 'administrator';
-  // $admin_role->weight = 2;
-  // user_role_save($admin_role);
-  // user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  $admin_role = new stdClass();
+  $admin_role->name = 'administrator';
+  $admin_role->weight = 2;
+  user_role_save($admin_role);
+  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
   // Set this as the administrator role.
-  // variable_set('user_admin_role', $admin_role->rid);
+  variable_set('user_admin_role', $admin_role->rid);
 
   // Assign user 1 the "administrator" role.
   // db_insert('users_roles')
