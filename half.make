@@ -30,10 +30,16 @@ projects[pathauto][version] = 1.2
 projects[pathauto][subdir] = contrib
 projects[references][version] = 2.1
 projects[references][subdir] = contrib
+projects[strongarm][version] = 2.0
+projects[strongarm][subdir] = contrib
 projects[token][version] = 1.5
 projects[token][subdir] = contrib
 projects[views][version] = 3.10
 projects[views][subdir] = contrib
+projects[views_bulk_operations][version] = 3.2
+projects[views_bulk_operations][subdir] = contrib
+projects[views_data_export][version] = 3.0-beta8
+projects[views_data_export][subdir] = contrib
 
 ; Custom Modules =================================================
 projects[hck2][type] = module

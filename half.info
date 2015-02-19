@@ -42,6 +42,12 @@ dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
 
+; Features
+dependencies[] = bios
+dependencies[] = events
+dependencies[] = locations
+dependencies[] = whitepapers
+
 ; Information added by HCK2 
 version = "7.34"
 project = "half"
