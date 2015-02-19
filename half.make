@@ -58,3 +58,13 @@ projects[halftheme][download][url] = "git://github.com/ericojeda/halftheme.git"
 projects[halftheme][download][branch] = master
 
 ; Libraries ======================================================
+libraries[backbone][type] = library
+libraries[backbone][download][type] = git
+libraries[backbone][download][url] = "https://github.com/jashkenas/backbone.git"
+libraries[underscore][type] = library
+libraries[underscore][download][type] = get
+libraries[underscore][download][url] = "https://github.com/jashkenas/underscore/archive/1.5.2.zip"
+libraries[modernizr][type] = library
+libraries[modernizr][download][type] = git
+libraries[modernizr][download][url] = "https://github.com/ericojeda/modernizr.git"
+
