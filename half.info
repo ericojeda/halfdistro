@@ -25,10 +25,10 @@ dependencies[] = rdf
 ; Contributed Modules
 dependencies[] = backup_migrate
 dependencies[] = ctools
+dependencies[] = ckeditor
 dependencies[] = date
 dependencies[] = date_api
-dependencies[] = imce
-dependencies[] = imce_wysiwyg
+;dependencies[] = imce
 dependencies[] = jquery_update
 dependencies[] = libraries
 dependencies[] = link
@@ -41,7 +41,6 @@ dependencies[] = node_reference
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
-dependencies[] = wysiwyg
 
 ; Information added by HCK2 
 version = "7.34"
