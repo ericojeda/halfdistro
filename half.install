@@ -308,7 +308,6 @@ function half_install() {
 
   if($node = node_submit($node)) { // Prepare node for saving
       node_save($node);
-      echo "Node with nid " . $node->nid . " saved!\n";
   }
 
   variable_set('site_frontpage', 'node/1');
