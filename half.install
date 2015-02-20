@@ -58,16 +58,6 @@ function half_install() {
       'pages' => '',
       'cache' => -1,
     ),
-    array(
-      'module' => 'menu',
-      'delta' => 'main-menu',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => -1,
-      'region' => 'header',
-      'pages' => '',
-      'cache' => -1,
-    ),
   );
   $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache'));
   foreach ($values as $record) {
@@ -322,16 +312,5 @@ function half_install() {
   }
 
   variable_set('site_frontpage', 'node/1');
-
-  // Create a Home link in the main menu.
-  $item = array(
-    'link_title' => st('Home'),
-    'link_path' => '<front>',
-    'menu_name' => 'main-menu',
-  );
-  menu_link_save($item);
-
-  // Update the menu router information.
-  menu_rebuild();
 
 }
