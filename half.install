@@ -154,12 +154,12 @@ function half_install() {
 
   // Creating image styles
 
-  $style = image_style_save(array('name' => 'avatar'));
+  $style = image_style_save(array('name' => 'homepage_image', 'label' => 'Homepage Image'));
   $effect = array(
-    'name' => 'image_scale',
+    'name' => 'image_scale_and_crop',
     'data' => array(
-      'width' => 64,
-      'height' => 64,
+      'width' => 960,
+      'height' => 375,
       'upscale' => TRUE,
     ),
     'isid' => $style['isid'],
