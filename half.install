@@ -153,32 +153,83 @@ function half_install() {
   variable_set('node_submitted_page', FALSE);
 
   // Creating image styles
-  image_style_save(array(
-    'name' => 'homepage_image', 
-    'label' => 'Homepage Image',
-    'effects' => array(
-      array(
-        'name' => 'image_scale',
-        'data' => array(
-            'width' => 100,
-            'height' => '',
-            'upscale' => 1,
-        ),
-        'weight' => 1,
-        ),
-      ),
+   $style = image_style_save(array('name' => 'homepage_image', 'label' => 'Homepage Image'));
+  $effect = array(
+    'name' => 'image_scale_and_crop',
+    'data' => array(
+      'width' => 960,
+      'height' => 375,
+      'upscale' => TRUE,
+    ),
+    'isid' => $style['isid'],
+  );
+  image_effect_save($effect);
+
+  $style = image_style_save(array('name' => 'page_image', 'label' => 'Page Image'));
+  $effect = array(
+    'name' => 'image_scale_and_crop',
+    'data' => array(
+      'width' => 720,
+      'height' => 375,
+      'upscale' => TRUE,
+    ),
+    'isid' => $style['isid'],
+  );
+  image_effect_save($effect);
+  
+
+// Create an image field named "Image", enabled for the 'article' content type.
+  // Many of the following values will be defaulted, they're included here as an illustrative examples.
+  // See http://api.drupal.org/api/function/field_create_field/7
+
+  $field = array(
+    'field_name' => 'field_page_image',
+    'type' => 'image',
+    'cardinality' => 1,
+    'locked' => FALSE,
+    'indexes' => array('fid' => array('fid')),
+    'settings' => array(
+      'uri_scheme' => 'public',
+      'default_image' => FALSE,
+    ),
+    'storage' => array(
+      'type' => 'field_sql_storage',
+      'settings' => array(),
     ),
   );
-  // $effect = array(
-  //   'name' => 'image_scale_and_crop',
-  //   'data' => array(
-  //     'width' => 960,
-  //     'height' => 375,
-  //     'upscale' => TRUE,
-  //   ),
-  //   'isid' => $style['isid'],
-  // );
-  // image_effect_save($effect);
+  field_create_field($field);
+
+
+  // Many of the following values will be defaulted, they're included here as an illustrative examples.
+  // See http://api.drupal.org/api/function/field_create_instance/7
+  $instance = array(
+    'field_name' => 'field_page_image',
+    'entity_type' => 'node',
+    'label' => 'Page Image',
+    'bundle' => 'page',
+    'description' => st('Upload a banner image to go with this page.'),
+    'required' => FALSE,
+
+    'settings' => array(
+      'file_directory' => 'field/image',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'alt_field' => TRUE,
+      'title_field' => '',
+    ),
+
+    'widget' => array(
+      'type' => 'image_image',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+        'preview_image_style' => 'thumbnail',
+      ),
+      'weight' => -1,
+    ),
+  );
+  field_create_instance($instance);
 
   // Setting text formats
   $full_html_format = array(
