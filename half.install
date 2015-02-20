@@ -37,7 +37,6 @@ function half_install() {
 
   // Enable some standard blocks.
   $default_theme = variable_get('theme_default', 'half');
-  module_enable()
   $values = array(
     array(
       'module' => 'system',
