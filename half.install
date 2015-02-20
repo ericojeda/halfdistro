@@ -153,18 +153,31 @@ function half_install() {
   variable_set('node_submitted_page', FALSE);
 
   // Creating image styles
-
-  $style = image_style_save(array('name' => 'homepage_image', 'label' => 'Homepage Image'));
-  $effect = array(
-    'name' => 'image_scale_and_crop',
-    'data' => array(
-      'width' => 960,
-      'height' => 375,
-      'upscale' => TRUE,
+  image_style_save(array(
+    'name' => 'homepage_image', 
+    'label' => 'Homepage Image',
+    'effects' => array(
+      array(
+        'name' => 'image_scale',
+        'data' => array(
+            'width' => 100,
+            'height' => '',
+            'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
     ),
-    'isid' => $style['isid'],
-  );
-  image_effect_save($effect);
+  ));
+  // $effect = array(
+  //   'name' => 'image_scale_and_crop',
+  //   'data' => array(
+  //     'width' => 960,
+  //     'height' => 375,
+  //     'upscale' => TRUE,
+  //   ),
+  //   'isid' => $style['isid'],
+  // );
+  // image_effect_save($effect);
 
   // Setting text formats
   $full_html_format = array(
