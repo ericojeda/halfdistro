@@ -228,6 +228,21 @@ function half_install() {
       ),
       'weight' => -1,
     ),
+
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'type' => 'image',
+        'settings' => array(),
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'type' => 'image',
+        'settings' => array(),
+        'weight' => 1,
+      ),
+    ),
   );
   field_create_instance($instance);
 
