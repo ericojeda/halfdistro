@@ -165,9 +165,10 @@ function half_install() {
             'upscale' => 1,
         ),
         'weight' => 1,
+        ),
       ),
     ),
-  ));
+  );
   // $effect = array(
   //   'name' => 'image_scale_and_crop',
   //   'data' => array(
