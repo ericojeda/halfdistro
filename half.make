@@ -46,10 +46,10 @@ projects[views_data_export][version] = 3.0-beta8
 projects[views_data_export][subdir] = contrib
 
 ; Custom Modules =================================================
-projects[hck2][type] = module
-projects[hck2][download][type] = git
-projects[hck2][download][url] = "https://knots-of-burl.git.beanstalkapp.com/burls.git"
-projects[hck2][subdir] = features
+;projects[hck2][type] = module
+;projects[hck2][download][type] = git
+;projects[hck2][download][url] = "https://knots-of-burl.git.beanstalkapp.com/burls.git"
+;projects[hck2][subdir] = features
 
 ; Themes =========================================================
 projects[halftheme][type] = theme
