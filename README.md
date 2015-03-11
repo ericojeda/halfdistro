@@ -1,4 +1,4 @@
-#Drupal 7 HCK2 Half Distro
+#Drupal: 7 HCK2 Half Distro
 
 ##Installation
  
