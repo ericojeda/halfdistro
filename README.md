@@ -9,7 +9,7 @@ Clone HCK2 Half Distro
 or  
 `git clone git@github.com:ericojeda/halfdistro.git hck2-half`
   
- Change directory to halfdistro  
+ Change directory to hck2-half  
 `cd hck2-half`
 
 Make distro via Drush  
