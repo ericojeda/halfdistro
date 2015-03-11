@@ -1,4 +1,6 @@
-#Drupal: 7 HCK2 Half Distro
+#Drupal 7: HCK2 Half Distro
+Creates a Drupal 7 installation with several preloaded modules
+
 
 ##Installation
  
