@@ -1,5 +1,5 @@
-Drupal 7 Half Distro
---------------------
+#Drupal 7 Half Distro
+
 ##Installation
  
 Clone into any directory  
