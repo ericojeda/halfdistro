@@ -2,13 +2,13 @@
 
 ##Installation
  
-Clone into any directory  
-`git clone https://github.com/ericojeda/halfdistro.git`  
+Clone HCK2 Half Distro  
+`git clone https://github.com/ericojeda/halfdistro.git hck2-half`  
 or  
-`git clone git@github.com:ericojeda/halfdistro.git`
+`git clone git@github.com:ericojeda/halfdistro.git hck2-half`
   
  Change directory to halfdistro  
-`cd halfdistro`
+`cd hck2-half`
 
 Make distro via Drush  
 `drush make --prepare-install distro.make /path/to/your/dir`
