@@ -1,4 +1,4 @@
-#Drupal 7 Half Distro
+#Drupal 7 HCK2 Half Distro
 
 ##Installation
  
@@ -10,9 +10,16 @@ Make distro via Drush
  
 ##Included Modules  
   
-* I don't Know
-* What will be here yet
-* Maybe Eric can fill this out
+* CKEditor
+* CTools
+* Nodequeue
+* Strongarm
+* Views
+
+##Included Libraries
+* Backbone
+* Underscore
+* Modernizr
     
 ##Author
 Eric Ojeda
